@@ -3,8 +3,8 @@
 @import '../styles/utils/variables';
 @import '../components/Loader/loader';
 @import './bases/base', './bases/typo';
-@import '../components/Header/Header.scss';
-@import '../components/AsideNavBar/asideNavBar.scss';
+@import '../components/Header/header';
+@import '../components/Aside/aside';
 @import '../pages/UnderConstruction/underConstruction';
 @import '../pages/404/404';
 @import '../pages/Home/home';
