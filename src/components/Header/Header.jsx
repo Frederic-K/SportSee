@@ -15,39 +15,47 @@ const Header = () => {
         </NavLink>
       </div>
       <ul className="header__links">
-        <NavLink
-          to="/"
-          className={(nav) =>
-            nav.isActive ? 'header__link--active' : 'header__link'
-          }
-        >
-          <li>Accueil</li>
-        </NavLink>
-        <NavLink
-          //   to={`/profil/user/${userId}`}
-          to="/profil"
-          className={(nav) =>
-            nav.isActive ? 'header__link--active' : 'header__link'
-          }
-        >
-          <li>Profil</li>
-        </NavLink>
-        <NavLink
-          to="/setting"
-          className={(nav) =>
-            nav.isActive ? 'header__link--active' : 'header__link'
-          }
-        >
-          <li>Réglage</li>
-        </NavLink>
-        <NavLink
-          to="/community"
-          className={(nav) =>
-            nav.isActive ? 'header__link--active' : 'header__link'
-          }
-        >
-          <li>Communauté</li>
-        </NavLink>
+        <li>
+          <NavLink
+            to="/"
+            className={(nav) =>
+              nav.isActive ? 'header__link--active' : 'header__link'
+            }
+          >
+            Accueil
+          </NavLink>{' '}
+        </li>
+        <li>
+          <NavLink
+            //   to={`/profil/user/${userId}`}
+            to="/profil"
+            className={(nav) =>
+              nav.isActive ? 'header__link--active' : 'header__link'
+            }
+          >
+            Profil
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/setting"
+            className={(nav) =>
+              nav.isActive ? 'header__link--active' : 'header__link'
+            }
+          >
+            Réglage
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/community"
+            className={(nav) =>
+              nav.isActive ? 'header__link--active' : 'header__link'
+            }
+          >
+            Communauté
+          </NavLink>
+        </li>
       </ul>
     </header>
   )
