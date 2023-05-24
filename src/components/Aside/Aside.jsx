@@ -8,47 +8,56 @@ function aside() {
   return (
     <aside className="aside">
       <ul className="aside__links">
-        <NavLink
-          to="/meditation"
-          className={(nav) =>
-            nav.isActive ? 'aside__link--active' : 'aside__link'
-          }
-        >
-          <li>
-            <img src={Zen} alt="Activité : relaxation" />
-          </li>
-        </NavLink>
-        <NavLink
-          to="/swimming"
-          className={(nav) =>
-            nav.isActive ? 'aside__link--active' : 'aside__link'
-          }
-        >
-          <li>
-            <img src={Swim} alt="Activité : natation" />
-          </li>
-        </NavLink>
-        <NavLink
-          to="/cycling"
-          className={(nav) =>
-            nav.isActive ? 'aside__link--active' : 'aside__link'
-          }
-        >
-          <li>
-            <img src={Bicycle} alt="Activité : cyclisme" />
-          </li>
-        </NavLink>
-        <NavLink
-          to="/bodybuilding"
-          className={(nav) =>
-            nav.isActive ? 'aside__link--active' : 'aside__link'
-          }
-        >
-          <li>
-            <img src={Dumbell} alt="Activité : musculation" />
-          </li>
-        </NavLink>
+        <li>
+          <NavLink
+            to="/meditation"
+            className={(nav) =>
+              nav.isActive ? 'aside__link--active' : 'aside__link'
+            }
+          >
+            <div>
+              <img src={Zen} alt="Activité : relaxation" />
+            </div>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/swimming"
+            className={(nav) =>
+              nav.isActive ? 'aside__link--active' : 'aside__link'
+            }
+          >
+            <div>
+              <img src={Swim} alt="Activité : natation" />
+            </div>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/cycling"
+            className={(nav) =>
+              nav.isActive ? 'aside__link--active' : 'aside__link'
+            }
+          >
+            <div>
+              <img src={Bicycle} alt="Activité : cyclisme" />
+            </div>
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/bodybuilding"
+            className={(nav) =>
+              nav.isActive ? 'aside__link--active' : 'aside__link'
+            }
+          >
+            <div>
+              <img src={Dumbell} alt="Activité : musculation" />
+            </div>
+          </NavLink>
+        </li>
       </ul>
+      <p className="aside__ref">Copyright, SportSee 2020</p>
     </aside>
   )
 }

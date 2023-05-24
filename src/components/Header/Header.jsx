@@ -1,15 +1,14 @@
 import { NavLink } from 'react-router-dom'
-// import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import Logo from '../../assets/logo/logo.svg'
 
 const Header = () => {
-  // const userId = useParams()
-  // console.log('userID useParams', userId)
+  const { userID } = useParams()
+  console.log('userID useParams', userID)
 
   return (
     <header className="header">
       <div className="header__logo">
-        {' '}
         <NavLink to="/">
           <img src={Logo} alt="Logo SportSee" />
         </NavLink>
@@ -17,17 +16,17 @@ const Header = () => {
       <ul className="header__links">
         <li>
           <NavLink
-            to="/"
+            // to={`/user/${userID}`}
+            to="/user/12"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
             }
           >
             Accueil
-          </NavLink>{' '}
+          </NavLink>
         </li>
         <li>
           <NavLink
-            // to={`/profil/user/${userId}`}
             to="/profil"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
