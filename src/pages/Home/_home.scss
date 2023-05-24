@@ -1,0 +1,30 @@
+.home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  &__profilPix {
+    display: flex;
+    gap: 100px;
+    img {
+      width: 275px;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__input {
+      width: 450px;
+      height: 50px;
+      padding: 15px;
+      border: 2px solid $colour-primary;
+      border-radius: $border-rad;
+    }
+    &__btn {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
