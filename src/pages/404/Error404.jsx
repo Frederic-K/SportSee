@@ -1,14 +1,13 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 function Error404() {
   return (
-    <main className="main__errorPage">
-      <div className="main__errorPage--type">404</div>
-      <div className="main__errorPage--title">
+    <main className="errorPage">
+      <div className="errorPage__type">404</div>
+      <div className="errorPage__title">
         Oups! La page que vous demandez n'existe pas.
       </div>
-      <NavLink to="/" className="main__errorPage--link">
+      <NavLink to="/" className="errorPage__link">
         Retourner sur la page d’accueil
       </NavLink>
     </main>
