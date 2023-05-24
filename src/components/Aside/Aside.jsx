@@ -4,14 +4,14 @@ import Swim from '../../assets/icon/swim.svg'
 import Bicycle from '../../assets/icon/bicycle.svg'
 import Dumbell from '../../assets/icon/dumbell.svg'
 
-function AsideNavBar() {
+function aside() {
   return (
-    <aside className="asideNavBar">
-      <ul className="asideNavBar__links">
+    <aside className="aside">
+      <ul className="aside__links">
         <NavLink
           to="/meditation"
           className={(nav) =>
-            nav.isActive ? 'asideNavBar__link--active' : 'asideNavBar__link'
+            nav.isActive ? 'aside__link--active' : 'aside__link'
           }
         >
           <li>
@@ -21,7 +21,7 @@ function AsideNavBar() {
         <NavLink
           to="/swimming"
           className={(nav) =>
-            nav.isActive ? 'asideNavBar__link--active' : 'asideNavBar__link'
+            nav.isActive ? 'aside__link--active' : 'aside__link'
           }
         >
           <li>
@@ -31,7 +31,7 @@ function AsideNavBar() {
         <NavLink
           to="/cycling"
           className={(nav) =>
-            nav.isActive ? 'asideNavBar__link--active' : 'asideNavBar__link'
+            nav.isActive ? 'aside__link--active' : 'aside__link'
           }
         >
           <li>
@@ -41,7 +41,7 @@ function AsideNavBar() {
         <NavLink
           to="/bodybuilding"
           className={(nav) =>
-            nav.isActive ? 'asideNavBar__link--active' : 'asideNavBar__link'
+            nav.isActive ? 'aside__link--active' : 'aside__link'
           }
         >
           <li>
@@ -53,4 +53,4 @@ function AsideNavBar() {
   )
 }
 
-export default AsideNavBar
+export default aside

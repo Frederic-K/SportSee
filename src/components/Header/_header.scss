@@ -21,7 +21,7 @@
     color: white;
     &:hover {
       color: $colour-redLight;
-      transform: scale(1.2);
+      font-size: 1.7rem;
     }
     &--active {
       color: $colour-primary;

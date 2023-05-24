@@ -27,7 +27,7 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            //   to={`/profil/user/${userId}`}
+            // to={`/profil/user/${userId}`}
             to="/profil"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
