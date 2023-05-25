@@ -12,14 +12,14 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <Aside />
+      {/* <Aside /> */}
       <Routes>
         <Route path="/" element={<HomeV2 />} />
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/user/:id" element={<Dashboard />} />
-        <Route path="/profil" element={<UnderConstruction />} />
-        <Route path="/setting" element={<UnderConstruction />} />
-        <Route path="/community" element={<UnderConstruction />} />
+        <Route path="/fake-profil" element={<UnderConstruction />} />
+        <Route path="/fake-setting" element={<UnderConstruction />} />
+        <Route path="/fake-community" element={<UnderConstruction />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>
