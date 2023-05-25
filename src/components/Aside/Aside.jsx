@@ -4,7 +4,7 @@ import Swim from '../../assets/icon/swim.svg'
 import Bicycle from '../../assets/icon/bicycle.svg'
 import Dumbell from '../../assets/icon/dumbell.svg'
 
-function aside() {
+function Aside() {
   return (
     <aside className="aside">
       <ul className="aside__links">
@@ -62,4 +62,4 @@ function aside() {
   )
 }
 
-export default aside
+export default Aside
