@@ -1,9 +1,12 @@
 .errorPage {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  flex-direction: column;
-  color: $colour-primary;
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: $colour-primary;
+  }
   &__type {
     font-size: 16rem;
     font-weight: 700;

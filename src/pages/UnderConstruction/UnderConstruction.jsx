@@ -5,9 +5,7 @@ import Aside from '../../components/Aside/Aside'
 function underConstruction() {
   return (
     <div className="underConstructionPage">
-      <aside>
-        <Aside />
-      </aside>
+      <Aside />
       <main className="underConstructionPage__content">
         <div className="errorPage__type">
           <img
