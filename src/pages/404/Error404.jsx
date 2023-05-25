@@ -10,7 +10,7 @@ function Error404() {
         <div className="errorPage__title">
           Oups! La page que vous demandez n'existe pas.
         </div>
-        <NavLink to="/" className="errorPage__link">
+        <NavLink to="/user/12" className="errorPage__link">
           Retourner sur la page d’accueil
         </NavLink>
       </section>

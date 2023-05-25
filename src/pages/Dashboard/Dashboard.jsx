@@ -5,7 +5,14 @@ function Dashboard() {
     <div className="dashboard">
       <Aside />
       <section className="dashboard__content">
-        <h1 className="dashboard__title">TEST Dashboard</h1>
+        <div className="dashboard__title">
+          <h1 className="dashboard__title--name">
+            Bonjour <span>Thomas</span>
+          </h1>
+          <h2 className="dashboard__title--caption">
+            Félicitation ! Vous avez explosé vos objectifs hier 👏
+          </h2>
+        </div>
         <div className="dashboard__datas">
           <div classNama="dasboard__datas--charts">
             <div className="chart__dailyActivity"></div>
