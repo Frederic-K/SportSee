@@ -17,7 +17,8 @@ const Header = () => {
         <li>
           <NavLink
             // to={`/user/${userID}`}
-            to="/user/:id"
+            // to="/user/fake-id"
+            to="/user/12"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
             }
@@ -27,7 +28,7 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            to="/profil"
+            to="/fake-profil"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
             }
@@ -37,7 +38,7 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            to="/setting"
+            to="/fake-setting"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
             }
@@ -47,7 +48,7 @@ const Header = () => {
         </li>
         <li>
           <NavLink
-            to="/community"
+            to="/fake-community"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
             }

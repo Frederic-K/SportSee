@@ -2,7 +2,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
+  &__title {
+    font-size: 3.5rem;
+    span {
+      color: $colour-primary;
+    }
+  }
   &__profilPix {
     display: flex;
     gap: 100px;
@@ -20,11 +27,18 @@
       padding: 15px;
       border: 2px solid $colour-primary;
       border-radius: $border-rad;
+      font-size: 1.2rem;
     }
     &__btn {
       width: 100%;
       display: flex;
       justify-content: space-between;
+      &--reset {
+        @include home-btn;
+      }
+      &--submit {
+        @include home-btn;
+      }
     }
   }
 }

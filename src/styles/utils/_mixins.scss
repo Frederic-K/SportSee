@@ -1,0 +1,11 @@
+@mixin home-btn {
+  width: 150px;
+  border: 2px solid $colour-tertiary;
+  border-radius: $border-rad;
+  font-size: 1.3rem;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: $colour-redLight;
+  }
+}

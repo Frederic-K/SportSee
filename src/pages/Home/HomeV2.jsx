@@ -14,7 +14,10 @@ export default function Home() {
   }
 
   return (
-    <div className="home">
+    <section className="home">
+      <h1 className="home__title">
+        Bienvenue sur <span>SportSee</span> !
+      </h1>
       <div className="home__profilPix">
         <div className="home__profilPix--male">
           <img src={ProfilPixMale} alt="Dessin de profile homme" />
@@ -41,6 +44,6 @@ export default function Home() {
           </button>
         </div>
       </form>
-    </div>
+    </section>
   )
 }
