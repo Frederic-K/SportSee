@@ -44,6 +44,11 @@ export default function Home() {
           </button>
         </div>
       </form>
+      <div className="home__form--infos">
+        <p>
+          (Pour utiliser les datas dupliquées, rajouter un "0" à votre userId)
+        </p>
+      </div>
     </section>
   )
 }

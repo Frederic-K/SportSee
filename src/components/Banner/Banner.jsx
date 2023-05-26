@@ -5,12 +5,10 @@ import Error404 from '../../pages/404/Error404'
 function Banner({ userId }) {
   console.log('userId', userId)
 
-  // let url = `${process.env.REACT_APP_API_BASE_URL}${process.env.REACT_APP_USER_ENDPOINT}${userId}`
-
   let url = `http://localhost:3000/user/${userId}`
 
-  if (userId === '122' || userId === '188') {
-    url = `${process.env.PUBLIC_URL}/data/${userId}/user.json`
+  if (userId === '120' || userId === '180') {
+    url = `../../../data/${userId}/user.json`
   }
   const { data } = useFetch(url)
   console.log('data007', data)
