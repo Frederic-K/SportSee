@@ -1,6 +1,6 @@
 import useFetch from '../../utils/useFetch'
-import Loader from '../Loader/Loader'
-import Error404 from '../../pages/404/Error404'
+// import Loader from '../Loader/Loader'
+// import Error404 from '../../pages/404/Error404'
 
 function Banner({ userId }) {
   console.log('userId', userId)
@@ -12,12 +12,13 @@ function Banner({ userId }) {
   }
   const { data } = useFetch(url)
   console.log('data007', data)
+  // console.log('data008', data.data.userInfos.firstName)
 
   return (
     <div className="dashboard__title">
       <h1 className="dashboard__title--name">
-        {/* Bonjour <span>{firstName}</span> */}
-        Bonjour <span>{userId}</span>
+        Bonjour <span>{data.data.userInfos.firstName}</span>
+        {/* Bonjour <span>{userId}</span> */}
       </h1>
       <h2 className="dashboard__title--caption">
         Félicitation ! Vous avez explosé vos objectifs hier 👏

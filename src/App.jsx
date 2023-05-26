@@ -10,10 +10,8 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      {/* <Aside /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/user/:id" element={<Dashboard />} />
         <Route path="/fake-profil" element={<UnderConstruction />} />
         <Route path="/fake-setting" element={<UnderConstruction />} />
