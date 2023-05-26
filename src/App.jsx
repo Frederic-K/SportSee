@@ -20,6 +20,7 @@ function App() {
         <Route path="/fake-profil" element={<UnderConstruction />} />
         <Route path="/fake-setting" element={<UnderConstruction />} />
         <Route path="/fake-community" element={<UnderConstruction />} />
+        <Route path="/fake-user" element={<UnderConstruction />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </BrowserRouter>

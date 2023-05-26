@@ -1,0 +1,14 @@
+.dashboard {
+  &__title {
+    width: 100%;
+    &--name {
+      margin-bottom: 40px;
+      span {
+        color: $colour-primary;
+      }
+    }
+    &--caption {
+      margin-bottom: 100px;
+    }
+  }
+}

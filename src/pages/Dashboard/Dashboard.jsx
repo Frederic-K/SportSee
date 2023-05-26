@@ -1,21 +1,23 @@
+import { useParams, Navigate } from 'react-router-dom'
+import Banner from '../../components/Banner/Banner'
 import Aside from '../../components/Aside/Aside'
+import DailyActivity from '../../components/DailyActivity/DailyActivity'
 
 function Dashboard() {
+  const { id } = useParams()
+  if (id !== '12' && id !== '18') {
+    return <Navigate to="/fake-user" />
+  }
   return (
     <div className="dashboard">
       <Aside />
       <section className="dashboard__content">
-        <div className="dashboard__title">
-          <h1 className="dashboard__title--name">
-            Bonjour <span>Thomas</span>
-          </h1>
-          <h2 className="dashboard__title--caption">
-            Félicitation ! Vous avez explosé vos objectifs hier 👏
-          </h2>
-        </div>
+        <Banner />
         <div className="dashboard__datas">
           <div className="dashboard__datas--charts">
-            <div className="chart__dailyActivity"></div>
+            <div className="chart__dailyActivity">
+              <DailyActivity />
+            </div>
             <div className="chart__activity">
               <div className="chart__activity--averageSessions"></div>
               <div className="chart__activity--performance"></div>
@@ -23,10 +25,10 @@ function Dashboard() {
             </div>
           </div>
           <div className="dashboard__datas--nutrition">
-            <div className="datas__nutrition--calories"></div>
+            {/* <div className="datas__nutrition--calories"></div>
             <div className="datas__nutrition--protein"></div>
             <div className="datas__nutrition--carbs"></div>
-            <div className="datas__nutrition--fat"></div>
+            <div className="datas__nutrition--fat"></div> */}
           </div>
         </div>
       </section>

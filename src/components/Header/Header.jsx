@@ -1,11 +1,7 @@
 import { NavLink } from 'react-router-dom'
-import { useParams } from 'react-router-dom'
 import Logo from '../../assets/logo/logo.svg'
 
 const Header = () => {
-  const { userID } = useParams()
-  console.log('userID useParams', userID)
-
   return (
     <header className="header">
       <div className="header__logo">
