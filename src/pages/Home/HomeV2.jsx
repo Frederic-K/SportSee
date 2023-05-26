@@ -30,9 +30,9 @@ export default function Home() {
         <input
           className="form__input"
           type="text"
-          id="userID"
-          name="userID"
-          placeholder="Saisir votre userID ici"
+          id="userId"
+          name="userId"
+          placeholder="Saisir votre userId ici"
           onChange={(event) => (userId.current = event.target.value)}
         />
         <div className="form__btn">

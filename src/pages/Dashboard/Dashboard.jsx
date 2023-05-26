@@ -5,18 +5,20 @@ import DailyActivity from '../../components/DailyActivity/DailyActivity'
 
 function Dashboard() {
   const { id } = useParams()
+  console.log('userId', id)
   if (id !== '12' && id !== '18') {
     return <Navigate to="/fake-user" />
   }
+
   return (
     <div className="dashboard">
       <Aside />
       <section className="dashboard__content">
-        <Banner />
+        <Banner userId={id} />
         <div className="dashboard__datas">
           <div className="dashboard__datas--charts">
             <div className="chart__dailyActivity">
-              <DailyActivity />
+              <DailyActivity userId={id} />
             </div>
             <div className="chart__activity">
               <div className="chart__activity--averageSessions"></div>

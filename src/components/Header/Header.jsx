@@ -12,7 +12,7 @@ const Header = () => {
       <ul className="header__links">
         <li>
           <NavLink
-            // to={`/user/${userID}`}
+            // to={`/user/${userId}`}
             // to="/user/fake-id"
             to="/user/12"
             className={(nav) =>
