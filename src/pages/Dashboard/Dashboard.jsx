@@ -14,7 +14,7 @@ function Dashboard() {
           </h2>
         </div>
         <div className="dashboard__datas">
-          <div classNama="dasboard__datas--charts">
+          <div className="dashboard__datas--charts">
             <div className="chart__dailyActivity"></div>
             <div className="chart__activity">
               <div className="chart__activity--averageSessions"></div>
