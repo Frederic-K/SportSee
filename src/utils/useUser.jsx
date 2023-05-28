@@ -8,16 +8,10 @@ function useUser(userId) {
 
   // let url = `http://localhost:3000/user/` + userId
 
-  // if (userId === '12' || userId === '18') {
-  //   setUrl(`http://localhost:3000/user/` + userId)
-  // } else {
-  //   setUrl(`../../data/${userId}/user`)
-  // }
-
   let url = ''
 
-  if (url === '12' || url === '18') {
-    url = `http://localhost:3000/user/` + userId
+  if (userId === '12' || userId === '18') {
+    url = `http://localhost:3000/user/${userId}`
   } else {
     url = `../../data/${userId}/user.json`
   }
