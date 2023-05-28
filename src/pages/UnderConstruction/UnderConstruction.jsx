@@ -17,8 +17,9 @@ function underConstruction() {
         <div className="errorPage__title">
           Oups! La page que vous demandez est en travaux.
         </div>
-        <NavLink to="/user/12" className="errorPage__link">
-          Retourner sur la page d’accueil
+        <NavLink to="/" className="errorPage__link">
+          {/* Retourner à la page de connexion */}
+          Retourner à la page d'acceuil
         </NavLink>
       </main>
     </div>

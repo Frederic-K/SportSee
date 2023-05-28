@@ -7,7 +7,8 @@ function Dashboard() {
   const { id } = useParams()
   console.log('userId', id)
   if (id !== '12' && id !== '120' && id !== '18' && id !== '180') {
-    return <Navigate to="/fake-user" />
+    // return <Navigate to="/fake-user" />
+    return <Navigate to="*" />
   }
   return (
     <div className="dashboard">
