@@ -3,8 +3,7 @@ import SpinLoader from '../Loader/SpinLoader'
 
 function Banner({ userId }) {
   const { isLoading, data, error } = useUser(userId)
-
-  console.log('dataBanner', data)
+  // console.log('dataBanner', data)
 
   if (error) {
     return <div>Erreur de chargement...</div>
