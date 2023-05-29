@@ -2,10 +2,11 @@ import { useParams, Navigate } from 'react-router-dom'
 import Banner from '../../components/Banner/Banner'
 import Aside from '../../components/Aside/Aside'
 import DailyActivity from '../../components/DailyActivity/DailyActivity'
+import KeyData from '../../components/KeyDatas/KeyDatas'
 
 function Dashboard() {
   const { id } = useParams()
-  console.log('userId', id)
+
   if (id !== '12' && id !== '120' && id !== '18' && id !== '180') {
     // return <Navigate to="/fake-user" />
     return <Navigate to="*" />
@@ -27,6 +28,7 @@ function Dashboard() {
             </div>
           </div>
           <div className="dashboard__datas--nutrition">
+            <KeyData userId={id} />
             {/* <div className="datas__nutrition--calories"></div>
             <div className="datas__nutrition--protein"></div>
             <div className="datas__nutrition--carbs"></div>

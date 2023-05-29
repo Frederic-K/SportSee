@@ -6,6 +6,8 @@ function userDataModeling(data) {
     userInfos: data.userInfos,
   }
 
+  console.log('userModeledData-userDataModeling', userModeledData)
+
   return userModeledData
 }
 
