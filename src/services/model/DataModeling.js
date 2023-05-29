@@ -1,12 +1,12 @@
 function userDataModeling(data) {
-  let UserModeledData = {
+  let userModeledData = {
     id: data.id,
     keyData: data.keyData,
     score: data.todayScore ? data.todayScore : data.score,
     userInfos: data.userInfos,
   }
 
-  return UserModeledData
+  return userModeledData
 }
 
 export default userDataModeling
