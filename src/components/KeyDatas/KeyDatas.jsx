@@ -5,7 +5,7 @@ import KeyDataCard from '../KeyDataCard/KeyDataCard'
 function KeyData({ userId }) {
   const { isLoading, data, error } = useUser(userId)
 
-  // console.log('keyData', data.data)
+  // console.log('keyData', data.data?.keyData)
 
   if (error) {
     return <div>Erreur de chargement...</div>
@@ -17,10 +17,20 @@ function KeyData({ userId }) {
         <SpinLoader />
       ) : (
         <div className="keyDatas__nutrition--cards">
-          {Object.keys(data.data.keyData).map((card, index) => {
+          {Object.entries(data.data.keyData).map((card, index) => {
             return <KeyDataCard key={`card-${index}`} data={card} />
           })}
         </div>
+        // <div className="keyDatas__nutrition--cards">
+        //   {Object.keys(data.data.keyData).map((card, index) => {
+        //     return <KeyDataCard key={`card-${index}`} data={card} />
+        //   })}
+        // </div>
+        // <div className="keyDatas__nutrition--cards">
+        //   {Object.values(data.data.keyData).map((card, index) => {
+        //     return <KeyDataCard key={`card-${index}`} data={card} />
+        //   })}
+        // </div>
       )}
     </div>
   )
