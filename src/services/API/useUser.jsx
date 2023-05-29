@@ -1,10 +1,7 @@
-import { useState, useEffect } from 'react'
+import { useFetch } from './useFetch'
+import { userDataModeling } from '../model/DataModeling'
 
 function useUser(userId) {
-  const [data, setData] = useState({})
-  const [isLoading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
-
   let url = ''
 
   if (userId === '12' || userId === '18') {
@@ -13,23 +10,9 @@ function useUser(userId) {
     url = `../../data/${userId}/user.json`
   }
 
-  useEffect(() => {
-    if (!url) return
-    setLoading(true)
-    async function fetchData() {
-      try {
-        const response = await fetch(url)
-        const data = await response.json()
-        setData(data)
-      } catch (err) {
-        console.log(err)
-        setError(true)
-      } finally {
-        setLoading(false)
-      }
-    }
-    fetchData()
-  }, [url])
-  return { isLoading, data, error }
+  const { data, isLoading, error } = useFetch(url)
+  const userModeledData = new userDataModeling(data)
+  console.log('userModeledData', userModeledData)
+  return { isLoading, userModeledData, error }
 }
 export default useUser
