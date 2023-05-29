@@ -29,10 +29,6 @@ function Dashboard() {
           </div>
           <div className="dashboard__datas--nutrition">
             <KeyData userId={id} />
-            {/* <div className="datas__nutrition--calories"></div>
-            <div className="datas__nutrition--protein"></div>
-            <div className="datas__nutrition--carbs"></div>
-            <div className="datas__nutrition--fat"></div> */}
           </div>
         </div>
       </section>
