@@ -2,11 +2,8 @@ import { useState, useEffect } from 'react'
 
 function useUser(userId) {
   const [data, setData] = useState({})
-  // const [url, setUrl] = useState({})
   const [isLoading, setLoading] = useState(true)
   const [error, setError] = useState(false)
-
-  // let url = `http://localhost:3000/user/` + userId
 
   let url = ''
 
