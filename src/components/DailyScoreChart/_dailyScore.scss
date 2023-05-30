@@ -1,0 +1,17 @@
+.chart {
+  &__activity {
+    &--score {
+      width: 258px;
+      height: 263px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      background-color: white;
+      .chart__score {
+        width: 217px;
+        height: 217px;
+      }
+    }
+  }
+}

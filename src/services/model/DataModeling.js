@@ -10,10 +10,10 @@ export default function userDataModeling(type, data) {
       data = getDailyScore(data)
       break
     // case 'user-sesions':
-    //   data = useAverageSeeions(id)
+    //   data = getAverageSeeions(data)
     //   break
     // case 'user-performance':
-    //   data = usePerformance(id)
+    //   data = getPerformance(data)
     //   break
     default:
       return {}
@@ -31,5 +31,5 @@ function getKeyData(data) {
 
 function getDailyScore(data) {
   let dailyScore = data.data.todayScore || data.data.score
-  return dailyScore
+  return dailyScore * 100
 }
