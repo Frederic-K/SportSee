@@ -8,8 +8,6 @@ import fatIcon from '../../assets/icon/cheeseburger.svg'
 export default function KeyData({ userId }) {
   const { isLoading, data, error } = useUser('key-data', userId)
 
-  console.log('keyData', data)
-
   if (error) {
     return <div>Erreur de chargement...</div>
   }

@@ -17,10 +17,10 @@
         width: 258px;
         height: 124px;
         display: flex;
+        align-items: center;
         margin: 0px;
         border-radius: $border-rad;
-        background-color: rgba(0, 0, 0, 0.03);
-        color: white;
+        background-color: rgba(0, 0, 0, 0.02);
         &--iconCalorie {
           @include keyDataIconCalorie;
         }
@@ -37,15 +37,20 @@
           height: 60px;
           display: flex;
           flex-direction: column;
+          justify-content: center;
           gap: 5px;
           margin: 0;
         }
         &--count {
           font-size: 20px;
+          font-weight: 600;
+          margin: 0px;
         }
         &--type {
           font-size: 14px;
+          font-weight: 600;
           color: $colour-tertiary;
+          margin: 0px;
         }
       }
     }

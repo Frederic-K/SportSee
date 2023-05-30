@@ -1,6 +1,7 @@
 .dashboard {
   &__title {
     width: 100%;
+    max-width: 1125px;
     &--name {
       margin-bottom: 40px;
       span {
