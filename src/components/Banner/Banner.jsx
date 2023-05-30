@@ -5,11 +5,12 @@ function Banner({ userId }) {
   const { isLoading, data, error } = useUser('firstName', userId)
   console.log('dataBanner', data)
 
+  let firstName = data
+
   if (error) {
+    firstName = 'Utilisateur inconnu'
     return <div>Erreur de chargement...</div>
   }
-
-  // const firstName = data.data?.userInfos.firstName
 
   return (
     <div className="dashboard__title">
@@ -18,8 +19,8 @@ function Banner({ userId }) {
       ) : (
         <h1 className="dashboard__title--name">
           {/* Bonjour <span>{data.data.userInfos.firstName}</span> */}
-          {/* Bonjour <span>{firstName}</span> */}
-          Bonjour <span>{userId}</span>
+          Bonjour <span>{firstName}</span>
+          {/* Bonjour <span>{userId}</span> */}
         </h1>
       )}
       <h2 className="dashboard__title--caption">
