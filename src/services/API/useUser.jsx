@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
+import userDataModeling from '../model/DataModeling'
+import { type } from '@testing-library/user-event/dist/type'
 
-function useUser(userId) {
+function useUser(userId, type) {
   const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(true)
   const [error, setError] = useState(false)
@@ -20,7 +22,10 @@ function useUser(userId) {
       try {
         const response = await fetch(url)
         const data = await response.json()
-        setData(data)
+
+        const userModeledData = userDataModeling(data, type)
+
+        setData(userModeledData)
       } catch (err) {
         console.log(err)
         setError(true)

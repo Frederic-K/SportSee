@@ -2,8 +2,8 @@ import useUser from '../../services/API/useUser'
 import SpinLoader from '../Loader/SpinLoader'
 
 function Banner({ userId }) {
-  const { isLoading, data, error } = useUser(userId)
-  // console.log('dataBanner', data)
+  const { isLoading, data, error } = useUser('firstName', userId)
+  console.log('dataBanner', data)
 
   if (error) {
     return <div>Erreur de chargement...</div>
@@ -17,8 +17,9 @@ function Banner({ userId }) {
         <SpinLoader />
       ) : (
         <h1 className="dashboard__title--name">
-          Bonjour <span>{data.data.userInfos.firstName}</span>
+          {/* Bonjour <span>{data.data.userInfos.firstName}</span> */}
           {/* Bonjour <span>{firstName}</span> */}
+          Bonjour <span>{userId}</span>
         </h1>
       )}
       <h2 className="dashboard__title--caption">
