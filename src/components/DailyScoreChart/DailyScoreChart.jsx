@@ -8,8 +8,8 @@ export default function DailyScoreChart({ userId }) {
   let dailyScore = data
 
   const dataScoreCircle = [
-    { name: 'A', x: 100, fill: '#FBFBFB' },
-    { name: 'B', x: dailyScore, fill: 'red' },
+    { name: 'A', x: 100, fill: 'white' },
+    { name: 'B', x: dailyScore, fill: '#ff0000' },
   ]
 
   if (error) {
@@ -24,28 +24,8 @@ export default function DailyScoreChart({ userId }) {
         <div className="chart__score">
           <ResponsiveContainer width="100%" height="100%">
             <RadialBarChart
-              //   cx="50%"
-              //   cy="50%"
-              innerRadius="100%"
-              outerRadius="100%"
-              barSize={10}
-              // barGap={6}
-              // barCategoryGap={6}
-              data={dataScoreCircle}
-              // domain={[0, 100]}
-              startAngle={90}
-              endAngle={450}
-            >
-              <RadialBar
-                minAngle={15}
-                clockWise
-                dataKey="x"
-                cornerRadius="50%"
-              />
-            </RadialBarChart>
-          </ResponsiveContainer>
-          {/* <ResponsiveContainer width="100%" height="100%">
-            <RadialBarChart
+              cx="50%"
+              cy="50%"
               innerRadius="100%"
               outerRadius="100%"
               barSize={10}
@@ -60,37 +40,34 @@ export default function DailyScoreChart({ userId }) {
                 background={{ fill: 'white' }}
               />
               <text
-              x="50%"
-              y="45%"
-              textAnchor="middle"
-              fontSize="26"
-              fontWeight="500"
-              fill="black"
-            >
-              {dailyScore}%
-            </text>
-            <text
-              x="50%"
-              y="55%"
-              textAnchor="middle"
-              fontSize="16"
-              fontWeight="400"
-              fill={'#74798C'}
-            >
-              de votre
-            </text>
-            <text
-              x="50%"
-              y="65%"
-              textAnchor="middle"
-              fontSize="16"
-              fontWeight="400"
-              fill={'#74798C'}
-            >
-              objectif
-            </text>
+                x="50%"
+                y="45%"
+                textAnchor="middle"
+                dominantBaseline="top"
+                className="chart__score--num"
+              >
+                {dailyScore}%
+              </text>
+              <text
+                x="50%"
+                y="55%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="chart__score--text"
+              >
+                de votre
+              </text>
+              <text
+                x="50%"
+                y="65%"
+                textAnchor="middle"
+                dominantBaseline="middle"
+                className="chart__score--text"
+              >
+                objectif
+              </text>
             </RadialBarChart>
-          </ResponsiveContainer> */}
+          </ResponsiveContainer>
         </div>
       )}
     </div>

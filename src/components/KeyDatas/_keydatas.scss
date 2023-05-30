@@ -20,7 +20,7 @@
         align-items: center;
         margin: 0px;
         border-radius: $border-rad;
-        background-color: rgba(0, 0, 0, 0.02);
+        background-color: $colour-bgLight;
         &--iconCalorie {
           @include keyDataIconCalorie;
         }

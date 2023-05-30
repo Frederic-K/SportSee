@@ -7,10 +7,20 @@
       justify-content: center;
       align-items: center;
       margin: 0px;
-      background-color: white;
+      background-color: $colour-bgLight;
       .chart__score {
         width: 217px;
         height: 217px;
+        &--num {
+          font-size: 26px;
+          font-weight: 700;
+          color: black;
+        }
+        &--text {
+          font-size: 16px;
+          font-weight: 600;
+          color: $colour-tertiary;
+        }
       }
     }
   }
