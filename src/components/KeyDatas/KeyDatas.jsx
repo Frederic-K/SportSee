@@ -2,14 +2,19 @@ import useUser from '../../services/API/useUser'
 import SpinLoader from '../Loader/SpinLoader'
 import KeyDataCard from '../KeyDataCard/KeyDataCard'
 
-function KeyData({ userId }) {
-  const { isLoading, data, error } = useUser(userId)
+export default function KeyData({ userId }) {
+  const { isLoading, data, error } = useUser('key-data', userId)
 
-  // console.log('keyData', data.data?.keyData)
+  let keyData = data
 
   if (error) {
     return <div>Erreur de chargement...</div>
   }
+
+  // console.log('keyData-1', Object.values(keyData))
+  // console.log('keyData-2', Object.keys(keyData))
+
+  console.log('calorieCount', keyData.calorieCount)
 
   return (
     <div className="keyDatas__nutrition">
@@ -17,7 +22,7 @@ function KeyData({ userId }) {
         <SpinLoader />
       ) : (
         <div className="keyDatas__nutrition--cards">
-          {Object.entries(data.data.keyData).map((card, index) => {
+          {Object.entries(keyData).map((card, index) => {
             return <KeyDataCard key={`card-${index}`} data={card} />
           })}
         </div>
@@ -35,5 +40,3 @@ function KeyData({ userId }) {
     </div>
   )
 }
-
-export default KeyData

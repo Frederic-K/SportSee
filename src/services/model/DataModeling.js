@@ -1,17 +1,5 @@
-// function userDataModeling(type, data) {
-//   let userModeledData = {
-//     id: data.id,
-//     keyData: data.keyData,
-//     score: data.todayScore ? data.todayScore : data.score,
-//     userInfos: data.userInfos,
-//   }
-
-//   console.log('userModeledData-userDataModeling', userModeledData.userInfos)
-
-//   return userModeledData
-// }
-
-// export default userDataModeling
+import iconCalorie from '../../assets/icon/energy.svg'
+import iconProtein from '../../assets/icon/chicken.svg'
 
 export default function userDataModeling(type, data) {
   switch (type) {
@@ -22,10 +10,10 @@ export default function userDataModeling(type, data) {
       data = getKeyData(data)
       break
     // case 'user-sesions':
-    //   data = await useAverageSeeions(id)
+    //   data = useAverageSeeions(id)
     //   break
     // case 'user-performance':
-    //   data = await usePerformance(id)
+    //   data = usePerformance(id)
     //   break
     default:
       return {}
@@ -34,22 +22,29 @@ export default function userDataModeling(type, data) {
 }
 
 function getFirstName(data) {
-  return data === 'Impossible de récupérer les données utilisateur'
-    ? 'Utilisateur inconnu'
-    : data.data.userInfos.firstName
-}
-
-export function getDefaultKeyData() {
-  return {
-    calorieCount: 0,
-    proteinCount: 0,
-    carbohydrateCount: 0,
-    lipidCount: 0,
-  }
+  return data.data.userInfos.firstName
 }
 
 function getKeyData(data) {
-  return data === 'Impossible de récupérer les données utilisateur'
-    ? getDefaultKeyData()
-    : data.data.keyData
+  return data.data.keyData
+}
+
+export function getCardKeyData(type, sum) {
+  switch (type) {
+    case 'calorieCount':
+      title = 'Calories'
+      value = sum
+      icon = { iconCalorie }
+      colour = 'ligthRed'
+      break
+    case 'proteinCount ':
+      title = 'Proteines'
+      value = sum
+      icon = { iconProtein }
+      colour = 'blue'
+      break
+    default:
+      return {}
+  }
+  return { title, value, unit, icon, colour }
 }

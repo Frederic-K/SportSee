@@ -4,7 +4,7 @@ import Aside from '../../components/Aside/Aside'
 import DailyActivity from '../../components/DailyActivity/DailyActivity'
 import KeyData from '../../components/KeyDatas/KeyDatas'
 
-function Dashboard() {
+export default function Dashboard() {
   const { id } = useParams()
 
   if (id !== '12' && id !== '120' && id !== '18' && id !== '180') {
@@ -35,5 +35,3 @@ function Dashboard() {
     </div>
   )
 }
-
-export default Dashboard

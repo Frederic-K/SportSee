@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Aside from '../../components/Aside/Aside'
 
-function Error404() {
+export default function Error404() {
   return (
     <div className="errorPage">
       <Aside />
@@ -17,5 +17,3 @@ function Error404() {
     </div>
   )
 }
-
-export default Error404

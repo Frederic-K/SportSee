@@ -1,14 +1,13 @@
 import useUser from '../../services/API/useUser'
 import SpinLoader from '../Loader/SpinLoader'
 
-function Banner({ userId }) {
+export default function Banner({ userId }) {
   const { isLoading, data, error } = useUser('firstName', userId)
   console.log('dataBanner', data)
 
   let firstName = data
 
   if (error) {
-    firstName = 'Utilisateur inconnu'
     return <div>Erreur de chargement...</div>
   }
 
@@ -29,5 +28,3 @@ function Banner({ userId }) {
     </div>
   )
 }
-
-export default Banner

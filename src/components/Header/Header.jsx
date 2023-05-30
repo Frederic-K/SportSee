@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/logo/logo.svg'
 
-function Header({ userId }) {
+export default function Header({ userId }) {
   // console.log('header ID', userId)
   return (
     <header className="header">
@@ -56,5 +56,3 @@ function Header({ userId }) {
     </header>
   )
 }
-
-export default Header

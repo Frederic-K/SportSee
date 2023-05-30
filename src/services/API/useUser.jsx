@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import userDataModeling from '../model/DataModeling'
 
-function useUser(type, userId) {
+export default function useUser(type, userId) {
   const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(true)
   const [error, setError] = useState(false)
@@ -35,4 +35,3 @@ function useUser(type, userId) {
   }, [type, userId, url])
   return { isLoading, data, error }
 }
-export default useUser
