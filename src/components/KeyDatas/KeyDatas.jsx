@@ -21,7 +21,7 @@ export default function KeyData({ userId }) {
       ) : (
         <div className="keyDatas__nutrition--cards">
           <div className="nutrition__card">
-            <div className="nutrition__card--icon">
+            <div className="nutrition__card--iconCalorie">
               <img src={energyIcon} alt="Icone calorie" />
             </div>
             <div className="nutrition__card--detail">
@@ -32,7 +32,7 @@ export default function KeyData({ userId }) {
             </div>
           </div>
           <div className="nutrition__card">
-            <div className="nutrition__card--icon">
+            <div className="nutrition__card--iconProtein">
               <img src={proteinIcon} alt="Icone proteine" />
             </div>
             <div className="nutrition__card--detail">
@@ -40,9 +40,8 @@ export default function KeyData({ userId }) {
               <div className="nutrition__card--type">Proteines</div>
             </div>
           </div>
-
           <div className="nutrition__card">
-            <div className="nutrition__card--icon">
+            <div className="nutrition__card--iconCarb">
               <img src={carbsIcon} alt="Icone glucide" />
             </div>
             <div className="nutrition__card--detail">
@@ -53,7 +52,7 @@ export default function KeyData({ userId }) {
             </div>
           </div>
           <div className="nutrition__card">
-            <div className="nutrition__card--icon">
+            <div className="nutrition__card--iconFat">
               <img src={fatIcon} alt="Icone lipide" />
             </div>
             <div className="nutrition__card--detail">
