@@ -6,6 +6,9 @@ export default function userDataModeling(type, data) {
     case 'key-data':
       data = getKeyData(data)
       break
+    case 'daily-score':
+      data = getDailyScore(data)
+      break
     // case 'user-sesions':
     //   data = useAverageSeeions(id)
     //   break
@@ -24,4 +27,9 @@ function getFirstName(data) {
 
 function getKeyData(data) {
   return data.data.keyData
+}
+
+function getDailyScore(data) {
+  let dailyScore = data.data.todayScore || data.data.score
+  return dailyScore
 }

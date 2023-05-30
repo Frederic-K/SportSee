@@ -1,7 +1,7 @@
 import { useParams, Navigate } from 'react-router-dom'
 import Banner from '../../components/Banner/Banner'
 import Aside from '../../components/Aside/Aside'
-import DailyActivity from '../../components/DailyActivity/DailyActivity'
+import DailyActivityChart from '../../components/DailyActivityChart/DailyActivityChart'
 import KeyData from '../../components/KeyDatas/KeyDatas'
 
 export default function Dashboard() {
@@ -19,7 +19,7 @@ export default function Dashboard() {
         <div className="dashboard__datas">
           <div className="dashboard__datas--charts">
             <div className="chart__dailyActivity">
-              <DailyActivity userId={id} />
+              <DailyActivityChart userId={id} />
             </div>
             <div className="chart__activity">
               <div className="chart__activity--averageSessions"></div>
