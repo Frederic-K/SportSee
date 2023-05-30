@@ -1,4 +1,3 @@
-// import { redirect } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
 import ProfilPixMale from '../../assets/icon/homme.png'
@@ -8,8 +7,10 @@ export default function Home() {
   const navigate = useNavigate()
   const userId = useRef('')
 
-  const handleSubmit = (event) => {
+  function handleSubmit(event) {
     event.preventDefault()
+    // test stocker userId en localStorage
+    // localStorage.setItem('userId', userId.current)
     navigate(`/user/${userId.current}`)
   }
 

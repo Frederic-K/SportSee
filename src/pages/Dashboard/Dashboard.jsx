@@ -27,9 +27,7 @@ export default function Dashboard() {
               <div className="chart__activity--score"></div>
             </div>
           </div>
-          <div className="dashboard__datas--nutrition">
-            <KeyData userId={id} />
-          </div>
+          <KeyData userId={id} />
         </div>
       </section>
     </div>

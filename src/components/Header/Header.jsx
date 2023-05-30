@@ -1,8 +1,9 @@
 import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/logo/logo.svg'
 
-export default function Header({ userId }) {
+export default function Header() {
   // console.log('header ID', userId)
+  // let userId = localStorage.getItem('userId')
   return (
     <header className="header">
       <div className="header__logo">
@@ -13,8 +14,8 @@ export default function Header({ userId }) {
       <ul className="header__links">
         <li>
           <NavLink
-            to={`/user/` + userId}
-            // to="/user/fake-id"
+            // to={`/user/${userId}`}
+            to="/user/fake-id"
             className={(nav) =>
               nav.isActive ? 'header__link--active' : 'header__link'
             }
