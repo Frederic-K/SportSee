@@ -21,7 +21,6 @@ export default function useUser(type, userId) {
       try {
         const response = await fetch(url)
         const data = await response.json()
-
         const userModeledData = userDataModeling(type, data)
         setData(userModeledData)
       } catch (err) {

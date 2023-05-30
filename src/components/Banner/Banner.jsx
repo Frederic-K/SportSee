@@ -3,7 +3,8 @@ import SpinLoader from '../Loader/SpinLoader'
 
 export default function Banner({ userId }) {
   const { isLoading, data, error } = useUser('firstName', userId)
-  console.log('dataBanner', data)
+
+  // console.log('dataBanner', data)
 
   let firstName = data
 

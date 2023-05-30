@@ -10,7 +10,7 @@ export default function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    navigate('/user/' + userId.current)
+    navigate(`/user/${userId.current}`)
   }
 
   return (

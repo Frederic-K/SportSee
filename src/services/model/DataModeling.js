@@ -1,6 +1,3 @@
-import iconCalorie from '../../assets/icon/energy.svg'
-import iconProtein from '../../assets/icon/chicken.svg'
-
 export default function userDataModeling(type, data) {
   switch (type) {
     case 'firstName':
@@ -29,22 +26,25 @@ function getKeyData(data) {
   return data.data.keyData
 }
 
-export function getCardKeyData(type, sum) {
-  switch (type) {
-    case 'calorieCount':
-      title = 'Calories'
-      value = sum
-      icon = { iconCalorie }
-      colour = 'ligthRed'
-      break
-    case 'proteinCount ':
-      title = 'Proteines'
-      value = sum
-      icon = { iconProtein }
-      colour = 'blue'
-      break
-    default:
-      return {}
-  }
-  return { title, value, unit, icon, colour }
-}
+// export function getCardKeyData(type, sum) {
+//   let { title, value, unit, icon, colour } = ''
+//   switch (type) {
+//     case 'calorieCount':
+//       title = 'Calories'
+//       value = sum
+//       unit = 'kCal'
+//       icon = { iconCalorie }
+//       colour = 'ligthRed'
+//       break
+//     case 'proteinCount ':
+//       title = 'Proteines'
+//       value = sum
+//       unit = 'g'
+//       icon = { iconProtein }
+//       colour = 'blue'
+//       break
+//     default:
+//       return {}
+//   }
+//   return { title, value, unit, icon, colour }
+// }
