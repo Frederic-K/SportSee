@@ -35,48 +35,25 @@ function getDailyScore(data) {
 }
 
 function getPerformance(data) {
-  const dataPerf = data.data
-  const arrayKind = Object.values(dataPerf.kind)
+  // const globalDataPerf = data.data
+  // const arrayKinds = Object.values(globalDataPerf.kind)
+  // console.log('arrayKinds', arrayKinds)
+
   const arrayKindValues = data.data.data
+  // console.log('arrayKindValues', arrayKindValues)
 
-  // console.log('dataPerf', dataPerf)
-  // console.log('dataPerfKind', dataPerfKind)
-  // console.log('arrayKind', arrayKind)
-  console.log('arrayKindValues', arrayKindValues)
-  // console.log('test to grab value', data.data.data)
+  const translateKind = [
+    'Cardio',
+    'Energie',
+    'Endurance',
+    'Force',
+    'Vitesse',
+    'Intensité',
+  ]
 
-  const arrayPerfData = arrayKind.map((kind) => {
-    const kindIndex = arrayKind.indexOf(kind) + 1
-
-    // console.log('kindIndex', kindIndex)
-
-    const kindValue = arrayKindValues.find((index) => index.kind === kindIndex)
-
-    // console.log('kindValue', kindValue)
-
-    const translatedkind = translate(kindIndex)
-
-    // console.log('translatedkind', translatedkind)
-
-    return { kind: translatedkind ?? null, value: kindValue?.value ?? null }
-  })
-  return arrayPerfData
-}
-function translate(kind) {
-  switch (kind) {
-    case 1:
-      return 'Cardio'
-    case 2:
-      return 'Energie'
-    case 3:
-      return 'Endurance'
-    case 4:
-      return 'Force'
-    case 5:
-      return 'Vitesse'
-    case 6:
-      return 'Intensité'
-    default:
-      return ''
-  }
+  const arrayPerfDatas = arrayKindValues?.map((kind, index) => ({
+    kind: translateKind[index],
+    value: kind.value,
+  }))
+  return arrayPerfDatas
 }
