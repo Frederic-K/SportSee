@@ -2,7 +2,7 @@ import { useParams, Navigate } from 'react-router-dom'
 import Banner from '../../components/Banner/Banner'
 import Aside from '../../components/Aside/Aside'
 import KeyData from '../../components/KeyDatas/KeyDatas'
-import DailyScoreChart from '../../components/DailyScoreChart/DailyScoreChart'
+import DailyScoreChart from '../../components/Chart/DailyScoreChart/DailyScoreChart'
 
 export default function Dashboard() {
   const { id } = useParams()

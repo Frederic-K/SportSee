@@ -1,14 +1,14 @@
 import { ResponsiveContainer, RadialBarChart, RadialBar } from 'recharts'
 
-import useUser from '../../services/API/useUser'
-import SpinLoader from '../Loader/SpinLoader'
+import useUser from '../../../services/API/useUser'
+import SpinLoader from '../../Loader/SpinLoader'
 
 export default function DailyScoreChart({ userId }) {
   const { isLoading, data, error } = useUser('daily-score', userId)
 
   let dailyScore = data
 
-  const radialBarData = [
+  const radialBarChartData = [
     { name: 'A', x: 100, fill: 'white' },
     { name: 'B', x: dailyScore, fill: '#ff0000' },
   ]
@@ -32,7 +32,7 @@ export default function DailyScoreChart({ userId }) {
               barSize={10}
               startAngle={90}
               endAngle={450}
-              data={radialBarData}
+              data={radialBarChartData}
             >
               <RadialBar minAngle={15} dataKey="x" cornerRadius="50%" />
               <text
