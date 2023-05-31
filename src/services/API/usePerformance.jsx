@@ -21,7 +21,9 @@ function usePerformance(type, userId) {
       try {
         const response = await fetch(url)
         const data = await response.json()
+        // console.log('fetchData', data)
         const userModeledData = userDataModeling(type, data)
+        // console.log('userModeledData', userModeledData)
         setData(userModeledData)
       } catch (err) {
         console.log(err)

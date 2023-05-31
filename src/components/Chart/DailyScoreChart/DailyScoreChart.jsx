@@ -7,7 +7,7 @@ export default function DailyScoreChart({ userId }) {
 
   let dailyScore = data
 
-  const radialBarChartData = [
+  const radialBararrayPerfData = [
     { name: 'A', x: 100, fill: 'white' },
     { name: 'B', x: dailyScore, fill: '#ff0000' },
   ]
@@ -31,7 +31,7 @@ export default function DailyScoreChart({ userId }) {
               barSize={10}
               startAngle={90}
               endAngle={450}
-              data={radialBarChartData}
+              data={radialBararrayPerfData}
             >
               <RadialBar minAngle={15} dataKey="x" cornerRadius="50%" />
               <text
