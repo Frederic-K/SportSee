@@ -30,6 +30,6 @@ function getKeyData(data) {
 }
 
 function getDailyScore(data) {
-  let dailyScore = data.data.todayScore || data.data.score
-  return dailyScore * 100
+  let dailyScore = data.data.todayScore * 100 || data.data.score * 100
+  return dailyScore
 }
