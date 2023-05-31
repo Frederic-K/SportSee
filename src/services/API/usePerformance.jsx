@@ -1,12 +1,10 @@
 import { useState, useEffect } from 'react'
+import userDataModeling from '../model/DataModeling'
 
-function usePerformance(userId) {
+function usePerformance(type, userId) {
   const [data, setData] = useState({})
-  // const [url, setUrl] = useState({})
   const [isLoading, setLoading] = useState(true)
   const [error, setError] = useState(false)
-
-  // let url = `http://localhost:3000/user/` + userId
 
   let url = ''
 
@@ -23,7 +21,8 @@ function usePerformance(userId) {
       try {
         const response = await fetch(url)
         const data = await response.json()
-        setData(data)
+        const userModeledData = userDataModeling(type, data)
+        setData(userModeledData)
       } catch (err) {
         console.log(err)
         setError(true)
@@ -32,7 +31,7 @@ function usePerformance(userId) {
       }
     }
     fetchData()
-  }, [url])
+  }, [type, userId, url])
   return { isLoading, data, error }
 }
 export default usePerformance
