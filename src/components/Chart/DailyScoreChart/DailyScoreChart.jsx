@@ -1,5 +1,4 @@
 import { ResponsiveContainer, RadialBarChart, RadialBar } from 'recharts'
-
 import useUser from '../../../services/API/useUser'
 import SpinLoader from '../../Loader/SpinLoader'
 

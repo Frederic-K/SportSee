@@ -3,6 +3,7 @@ import Banner from '../../components/Banner/Banner'
 import Aside from '../../components/Aside/Aside'
 import KeyData from '../../components/KeyDatas/KeyDatas'
 import DailyScoreChart from '../../components/Chart/DailyScoreChart/DailyScoreChart'
+import PerformanceChart from '../../components/Chart/PerformanceChart/PerformanceChart'
 
 export default function Dashboard() {
   const { id } = useParams()
@@ -21,7 +22,8 @@ export default function Dashboard() {
             <div className="chart__dailyActivity"></div>
             <div className="chart__activity">
               <div className="chart__activity--averageSessions"></div>
-              <div className="chart__activity--performance"></div>
+              {/* <div className="chart__activity--performance"></div> */}
+              <PerformanceChart userId={id} />
               {/* <div className="chart__activity--score"></div> */}
               <DailyScoreChart userId={id} />
             </div>
