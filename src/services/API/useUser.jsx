@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
+import userDataModeling from '../model/DataModeling'
 
-function useUser(userId) {
+export default function useUser(type, userId) {
   const [data, setData] = useState({})
   const [isLoading, setLoading] = useState(true)
   const [error, setError] = useState(false)
@@ -20,7 +21,8 @@ function useUser(userId) {
       try {
         const response = await fetch(url)
         const data = await response.json()
-        setData(data)
+        const userModeledData = userDataModeling(type, data)
+        setData(userModeledData)
       } catch (err) {
         console.log(err)
         setError(true)
@@ -29,7 +31,6 @@ function useUser(userId) {
       }
     }
     fetchData()
-  }, [url])
+  }, [type, userId, url])
   return { isLoading, data, error }
 }
-export default useUser

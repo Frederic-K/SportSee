@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import worksiteLogo from '../../assets/icon/travail-en-cours.png'
 import Aside from '../../components/Aside/Aside'
 
-function underConstruction() {
+export default function underConstruction() {
   return (
     <div className="underConstructionPage">
       <Aside />
@@ -25,5 +25,3 @@ function underConstruction() {
     </div>
   )
 }
-
-export default underConstruction

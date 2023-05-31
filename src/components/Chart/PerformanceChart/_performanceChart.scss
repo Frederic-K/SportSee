@@ -1,0 +1,10 @@
+.chart {
+  &__activity {
+    &--performance {
+      width: 258px;
+      height: 263px;
+      margin: 0px;
+      background-color: $colour-secondary;
+    }
+  }
+}

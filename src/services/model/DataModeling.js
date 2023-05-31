@@ -1,14 +1,35 @@
-function userDataModeling(data) {
-  let userModeledData = {
-    id: data.id,
-    keyData: data.keyData,
-    score: data.todayScore ? data.todayScore : data.score,
-    userInfos: data.userInfos,
+export default function userDataModeling(type, data) {
+  switch (type) {
+    case 'firstName':
+      data = getFirstName(data)
+      break
+    case 'key-data':
+      data = getKeyData(data)
+      break
+    case 'daily-score':
+      data = getDailyScore(data)
+      break
+    // case 'user-sesions':
+    //   data = getAverageSeeions(data)
+    //   break
+    // case 'user-performance':
+    //   data = getPerformance(data)
+    //   break
+    default:
+      return {}
   }
-
-  console.log('userModeledData-userDataModeling', userModeledData)
-
-  return userModeledData
+  return data
 }
 
-export default userDataModeling
+function getFirstName(data) {
+  return data.data.userInfos.firstName
+}
+
+function getKeyData(data) {
+  return data.data.keyData
+}
+
+function getDailyScore(data) {
+  let dailyScore = data.data.todayScore * 100 || data.data.score * 100
+  return dailyScore
+}

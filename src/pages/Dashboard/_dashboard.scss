@@ -3,7 +3,6 @@
   display: flex;
   &__content {
     width: 100%;
-    max-width: 1125px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -28,7 +27,7 @@
         &__activity {
           width: 835px;
           height: 320px;
-          background-color: $colour-tertiary;
+          // background-color: $colour-tertiary;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -38,28 +37,14 @@
             margin: 0px;
             background-color: $colour-secondary;
           }
-          &--performance {
-            width: 258px;
-            height: 263px;
-            margin: 0px;
-            background-color: $colour-secondary;
-          }
-          &--score {
-            width: 258px;
-            height: 263px;
-            margin: 0px;
-            background-color: $colour-secondary;
-          }
+          // &--performance {
+          //   width: 258px;
+          //   height: 263px;
+          //   margin: 0px;
+          //   background-color: $colour-secondary;
+          // }
         }
       }
-    }
-    &--nutrition {
-      width: 258px;
-      height: 680px;
-      background-color: $colour-tertiary;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
     }
   }
 }
