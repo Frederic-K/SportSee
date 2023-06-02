@@ -37,7 +37,7 @@ export default function PerformanceChart({ userId }) {
               <PolarAngleAxis
                 dataKey="kind"
                 stroke="white"
-                dy={3}
+                // dy={3}
                 tickLine={false}
                 // tick={{
                 //   fontSize: 10,
