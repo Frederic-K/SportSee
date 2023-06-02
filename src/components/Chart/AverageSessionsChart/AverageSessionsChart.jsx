@@ -33,7 +33,7 @@ export default function AverageSessionsChart({ userId }) {
                 data={data}
                 width={500}
                 height={300}
-                margin={{ top: 0, right: 10, left: 10, bottom: 5 }}
+                margin={{ top: 50, right: 10, left: 10, bottom: 10 }}
               >
                 <XAxis
                   tickLine={false}
