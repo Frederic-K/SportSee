@@ -1,3 +1,4 @@
+import TickRender from '../../../services/model/RenderPolarAngleAxis'
 import {
   PolarAngleAxis,
   // PolarRadiusAxis,
@@ -25,26 +26,27 @@ export default function PerformanceChart({ userId }) {
       ) : (
         <div className="chart__performance">
           <ResponsiveContainer width="100%" height="100%">
-            <RadarChart cx="50%" cy="50%" outerRadius={80} data={data}>
-              <PolarGrid radialLines={false} />
-              <PolarAngleAxis
-                dataKey="kind"
-                stroke="white"
-                dy={3}
-                tickLine={false}
-                tick={{
-                  fontSize: 10,
-                  fontWeight: 400,
-                  fill: 'white',
-                }}
-              />
-              {/* <PolarRadiusAxis angle={0} stroke="white" /> */}
+            <RadarChart cx="50%" cy="50%" outerRadius="65%" data={data}>
               <Radar
                 dataKey="value"
                 fill="#ff0000"
                 fillOpacity={0.7}
                 stroke="#ff0000"
               />
+              <PolarGrid radialLines={false} />
+              <PolarAngleAxis
+                dataKey="kind"
+                stroke="white"
+                dy={3}
+                tickLine={false}
+                // tick={{
+                //   fontSize: 10,
+                //   fontWeight: 400,
+                //   fill: 'white',
+                // }}
+                tick={(props) => TickRender(props)}
+              />
+              {/* <PolarRadiusAxis angle={0} stroke="white" /> */}
             </RadarChart>
           </ResponsiveContainer>
         </div>
