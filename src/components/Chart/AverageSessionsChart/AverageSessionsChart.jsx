@@ -33,7 +33,7 @@ export default function AverageSessionsChart({ userId }) {
                 data={data}
                 width={500}
                 height={300}
-                margin={{ top: 50, right: 10, left: 10, bottom: 10 }}
+                margin={{ top: 55, right: 10, left: 10, bottom: 10 }}
               >
                 <XAxis
                   tickLine={false}
@@ -50,13 +50,18 @@ export default function AverageSessionsChart({ userId }) {
                 <Tooltip
                   content={<CustomToolTip />}
                   cursor={<CursorShadow />}
+                  // cursor={{ strokeWidth: 20, stroke: 'rgba(0, 0, 0, 0.1)' }}
                 />
                 <Line
                   type="monotone"
                   dataKey="sessionLength"
                   stroke="#fff"
                   dot={false}
-                  activeDot={{ r: 5 }}
+                  activeDot={{
+                    r: 4,
+                    stroke: 'rgba(255,255,255, 0.6)',
+                    strokeWidth: 7,
+                  }}
                 />
               </LineChart>
             </ResponsiveContainer>
@@ -70,7 +75,7 @@ export default function AverageSessionsChart({ userId }) {
 function CustomToolTip({ active, payload }) {
   return active && payload ? (
     <div className="averageSessions__chart--toolTip">
-      <div className="min">{`${payload[0].value} min`}</div>
+      <div className="averageSessions__chart--toolTipText">{`${payload[0].value} min`}</div>
     </div>
   ) : null
 }
@@ -80,8 +85,8 @@ function CursorShadow({ points }) {
     <Rectangle
       fill="black"
       opacity={0.1}
-      x={points[1].x}
-      width={1000}
+      x={points[1].x - 10}
+      width={300}
       height={300}
     />
   )

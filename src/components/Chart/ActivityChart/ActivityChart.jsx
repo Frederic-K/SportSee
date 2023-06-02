@@ -7,6 +7,7 @@ import {
   Bar,
   ResponsiveContainer,
 } from 'recharts'
+
 import useActivity from '../../../services/API/useActivity'
 import SpinLoader from '../../Loader/SpinLoader'
 
