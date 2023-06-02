@@ -4,7 +4,7 @@ import Aside from '../../components/Aside/Aside'
 import KeyData from '../../components/KeyDatas/KeyDatas'
 import DailyScoreChart from '../../components/Chart/DailyScoreChart/DailyScoreChart'
 import PerformanceChart from '../../components/Chart/PerformanceChart/PerformanceChart'
-import AverageSessions from '../../components/Chart/AverageSessionsChart/AverageSessions'
+import AverageSessions from '../../components/Chart/AverageSessionsChart/AverageSessionsChart'
 
 export default function Dashboard() {
   const { id } = useParams()

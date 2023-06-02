@@ -1,7 +1,8 @@
-import TickRender from '../../../services/model/RadarChartTickRender'
+// import TickRender from '../../../services/model/RadarChartTickRender'
 import {
   PolarAngleAxis,
   // PolarRadiusAxis,
+  Text,
   PolarGrid,
   Radar,
   RadarChart,
@@ -39,7 +40,7 @@ export default function PerformanceChart({ userId }) {
                 stroke="white"
                 // dy={3}
                 tickLine={false}
-                tick={(props) => TickRender(props)}
+                tick={(props) => RadarChartTickRender(props)}
               />
               {/* <PolarRadiusAxis angle={0} stroke="white" /> */}
             </RadarChart>
@@ -47,5 +48,18 @@ export default function PerformanceChart({ userId }) {
         </div>
       )}
     </div>
+  )
+}
+
+function RadarChartTickRender({ payload, x, y, cx, cy, ...rest }) {
+  return (
+    <Text
+      {...rest}
+      verticalAnchor="middle"
+      y={y + (y - cy) / 20}
+      x={x + (x - cx) / 20}
+    >
+      {payload.value}
+    </Text>
   )
 }
