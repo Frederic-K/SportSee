@@ -25,24 +25,29 @@ export default function userDataModeling(type, data) {
 }
 
 function getFirstName(data) {
-  return data.data?.userInfos?.firstName || null
+  const globalUserData = data.data
+  const globalUserInfos = globalUserData.userInfos
+  return globalUserInfos.firstName
 }
 
 function getKeyData(data) {
-  return data.data?.keyData || null
+  const globalUserData = data.data
+  const globalKeyData = globalUserData.keyData
+  return globalKeyData
 }
 
 function getDailyScore(data) {
-  let dailyScore = data.data?.todayScore * 100 || data.data?.score * 100 || null
+  const globalUserData = data.data
+  let dailyScore = globalUserData.todayScore * 100 || globalUserData.score * 100
   return dailyScore
 }
 
 function getPerformance(data) {
-  // const globalDataPerf = data.data
+  const globalDataPerf = data.data
   // const arrayKinds = Object.values(globalDataPerf.kind)
   // console.log('arrayKinds', arrayKinds)
 
-  const arrayKindValues = data.data.data
+  const arrayKindValues = globalDataPerf.data
   // console.log('arrayKindValues', arrayKindValues)
 
   const translateKind = [
@@ -53,7 +58,6 @@ function getPerformance(data) {
     'Vitesse',
     'Intensité',
   ]
-
   const arrayPerfDatas = arrayKindValues?.map((kind, index) => ({
     kind: translateKind[index],
     value: kind.value,
@@ -84,6 +88,6 @@ function getActivity(data) {
       }
     }
   )
-  console.log('arraySessionsActivity', arraySessionsActivity)
+  // console.log('arraySessionsActivity', arraySessionsActivity)
   return arraySessionsActivity
 }

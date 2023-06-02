@@ -12,7 +12,7 @@ import SpinLoader from '../../Loader/SpinLoader'
 
 export default function ActivityChart({ userId }) {
   const { isLoading, data, error } = useActivity('user-activity', userId)
-  console.log('dataChart', data)
+  // console.log('dataChart', data)
 
   if (error) {
     return <div>Erreur de chargement...</div>

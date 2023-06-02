@@ -5,11 +5,9 @@ import SpinLoader from '../../Loader/SpinLoader'
 export default function DailyScoreChart({ userId }) {
   const { isLoading, data, error } = useUser('daily-score', userId)
 
-  let dailyScore = data
-
-  const radialBararrayPerfData = [
+  const radialBarArrayPerfData = [
     { name: 'A', x: 100, fill: 'white' },
-    { name: 'B', x: dailyScore, fill: '#ff0000' },
+    { name: 'B', x: data, fill: '#ff0000' },
   ]
 
   if (error) {
@@ -31,7 +29,7 @@ export default function DailyScoreChart({ userId }) {
               barSize={10}
               startAngle={90}
               endAngle={450}
-              data={radialBararrayPerfData}
+              data={radialBarArrayPerfData}
             >
               <RadialBar minAngle={15} dataKey="x" cornerRadius="50%" />
               <text
@@ -41,7 +39,7 @@ export default function DailyScoreChart({ userId }) {
                 dominantBaseline="top"
                 className="chart__score--num"
               >
-                {dailyScore}%
+                {data}%
               </text>
               <text
                 x="50%"
