@@ -11,5 +11,9 @@
     width: 100%;
     height: 100%;
     background-color: $colour-secondary;
+    tspan {
+      font-size: 10px;
+      font-weight: 400;
+    }
   }
 }

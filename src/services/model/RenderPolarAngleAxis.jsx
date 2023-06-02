@@ -12,8 +12,8 @@ export default function RenderPolarAngleAxis({
     <Text
       {...rest}
       verticalAnchor="middle"
-      y={y + (y - cy) / 3}
-      x={x + (x - cx) / 3}
+      y={y + (y - cy) / 20}
+      x={x + (x - cx) / 20}
     >
       {payload.value}
     </Text>
