@@ -39,11 +39,6 @@ export default function PerformanceChart({ userId }) {
                 stroke="white"
                 // dy={3}
                 tickLine={false}
-                // tick={{
-                //   fontSize: 10,
-                //   fontWeight: 400,
-                //   fill: 'white',
-                // }}
                 tick={(props) => TickRender(props)}
               />
               {/* <PolarRadiusAxis angle={0} stroke="white" /> */}
