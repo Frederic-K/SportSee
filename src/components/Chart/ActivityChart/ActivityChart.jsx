@@ -1,10 +1,10 @@
 import {
   BarChart,
-  Bar,
+  CartesianGrid,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
+  Bar,
   ResponsiveContainer,
 } from 'recharts'
 import useActivity from '../../../services/API/useActivity'

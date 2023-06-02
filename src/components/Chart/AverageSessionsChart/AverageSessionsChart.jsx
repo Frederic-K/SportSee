@@ -1,10 +1,10 @@
 import {
   LineChart,
-  Line,
   XAxis,
   YAxis,
-  Rectangle,
   Tooltip,
+  Line,
+  Rectangle,
   ResponsiveContainer,
 } from 'recharts'
 import useAverageSessions from '../../../services/API/useAverageSessions'

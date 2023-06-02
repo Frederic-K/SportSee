@@ -1,11 +1,11 @@
 // import TickRender from '../../../services/model/RadarChartTickRender'
 import {
-  PolarAngleAxis,
+  RadarChart,
+  Radar,
   // PolarRadiusAxis,
+  PolarAngleAxis,
   Text,
   PolarGrid,
-  Radar,
-  RadarChart,
   ResponsiveContainer,
 } from 'recharts'
 
