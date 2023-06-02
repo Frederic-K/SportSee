@@ -78,7 +78,7 @@ function LineChartToolTipRender({ active, payload }) {
 function LineChartCursorRender({ points }) {
   return (
     <Rectangle
-      fill="#000000"
+      fill="black"
       opacity={0.1}
       x={points[1].x}
       width={1000}
