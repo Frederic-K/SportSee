@@ -48,8 +48,8 @@ export default function AverageSessionsChart({ userId }) {
                   domain={['dataMin-10', 'dataMax+10']}
                 />
                 <Tooltip
-                  content={<LineChartToolTipRender />}
-                  cursor={<LineChartCursorRender />}
+                  content={<CustomToolTip />}
+                  cursor={<CursorShadow />}
                 />
                 <Line
                   type="monotone"
@@ -67,7 +67,7 @@ export default function AverageSessionsChart({ userId }) {
   )
 }
 
-function LineChartToolTipRender({ active, payload }) {
+function CustomToolTip({ active, payload }) {
   return active && payload ? (
     <div className="averageSessions__chart--toolTip">
       <div className="min">{`${payload[0].value} min`}</div>
@@ -75,7 +75,7 @@ function LineChartToolTipRender({ active, payload }) {
   ) : null
 }
 
-function LineChartCursorRender({ points }) {
+function CursorShadow({ points }) {
   return (
     <Rectangle
       fill="black"
