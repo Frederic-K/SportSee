@@ -19,12 +19,12 @@
       gap: 40px;
       margin: 0px;
       .chart {
-        &__dailyActivity {
-          width: 835px;
-          height: 320px;
-          background-color: $colour-tertiary;
-        }
-        &__activity {
+        // &__activity {
+        //   width: 835px;
+        //   height: 320px;
+        //   background-color: $colour-tertiary;
+        // }
+        &__activityDetails {
           width: 835px;
           height: 320px;
           // background-color: $colour-tertiary;

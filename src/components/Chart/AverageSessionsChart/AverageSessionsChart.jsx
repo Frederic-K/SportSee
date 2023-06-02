@@ -12,7 +12,7 @@ import SpinLoader from '../../Loader/SpinLoader'
 
 export default function AverageSessionsChart({ userId }) {
   const { isLoading, data, error } = useAverageSessions('user-sessions', userId)
-  console.log('dataChart', data)
+  // console.log('dataChart', data)
 
   if (error) {
     return <div>Erreur de chargement...</div>

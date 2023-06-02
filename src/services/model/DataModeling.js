@@ -15,6 +15,9 @@ export default function userDataModeling(type, data) {
     case 'user-sessions':
       data = getAverageSessions(data)
       break
+    case 'user-activity':
+      data = getActivity(data)
+      break
     default:
       return {}
   }
@@ -69,4 +72,18 @@ function getAverageSessions(data) {
     }
   })
   return arrayAverageSessions
+}
+
+function getActivity(data) {
+  const arraySessionsActivity = data.data.sessions.map(
+    ({ kilogram, calories }, index) => {
+      return {
+        kilogram: kilogram,
+        calories: calories,
+        day: (index + 1).toString(),
+      }
+    }
+  )
+  console.log('arraySessionsActivity', arraySessionsActivity)
+  return arraySessionsActivity
 }
