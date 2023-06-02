@@ -1,4 +1,4 @@
-import TickRender from '../../../services/model/RenderPolarAngleAxis'
+import TickRender from '../../../services/model/RadarChartTickRender'
 import {
   PolarAngleAxis,
   // PolarRadiusAxis,

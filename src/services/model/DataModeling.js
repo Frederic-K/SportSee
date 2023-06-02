@@ -12,9 +12,9 @@ export default function userDataModeling(type, data) {
     case 'user-performance':
       data = getPerformance(data)
       break
-    // case 'user-sesions':
-    //   data = getAverageSeeions(data)
-    //   break
+    case 'user-sessions':
+      data = getAverageSessions(data)
+      break
     default:
       return {}
   }
@@ -56,4 +56,17 @@ function getPerformance(data) {
     value: kind.value,
   }))
   return arrayPerfDatas
+}
+
+function getAverageSessions(data) {
+  // const globalDataAvgSessions = data.data
+  // console.log('globalDataAvgSessions', globalDataAvgSessions)
+  const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
+  const arrayAverageSessions = data.data.sessions.map((session) => {
+    return {
+      day: days[session.day - 1],
+      sessionLength: session.sessionLength,
+    }
+  })
+  return arrayAverageSessions
 }

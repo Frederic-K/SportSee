@@ -1,6 +1,6 @@
 import { Text } from 'recharts'
 
-export default function RenderPolarAngleAxis({
+export default function RadarChartTickRender({
   payload,
   x,
   y,
