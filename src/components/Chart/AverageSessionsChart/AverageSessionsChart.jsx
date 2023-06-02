@@ -56,7 +56,7 @@ export default function AverageSessionsChart({ userId }) {
                   dataKey="sessionLength"
                   stroke="#fff"
                   dot={false}
-                  activeDot={{ r: 3 }}
+                  activeDot={{ r: 5 }}
                 />
               </LineChart>
             </ResponsiveContainer>
