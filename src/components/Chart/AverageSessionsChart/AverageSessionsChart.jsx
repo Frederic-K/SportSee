@@ -86,7 +86,7 @@ function CustumCursorShadow({ points }) {
     <Rectangle
       fill="black"
       opacity={0.1}
-      x={points[1].x - 10}
+      x={points[0].x - 10}
       y={0}
       width={300}
       height={300}
