@@ -56,6 +56,7 @@ export default function AverageSessionsChart({ userId }) {
                   type="monotone"
                   dataKey="sessionLength"
                   stroke="#fff"
+                  strokeWidth={2}
                   dot={false}
                   activeDot={{
                     r: 4,
