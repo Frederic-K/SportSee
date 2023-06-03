@@ -49,13 +49,14 @@ export default function AverageSessionsChart({ userId }) {
                 />
                 <Tooltip
                   content={<CustomToolTip />}
-                  cursor={<CursorShadow />}
+                  cursor={<CustumCursorShadow />}
                   // cursor={{ strokeWidth: 20, stroke: 'rgba(0, 0, 0, 0.1)' }}
                 />
                 <Line
                   type="monotone"
                   dataKey="sessionLength"
                   stroke="#fff"
+                  strokeWidth={2}
                   dot={false}
                   activeDot={{
                     r: 4,
@@ -80,12 +81,13 @@ function CustomToolTip({ active, payload }) {
   ) : null
 }
 
-function CursorShadow({ points }) {
+function CustumCursorShadow({ points }) {
   return (
     <Rectangle
       fill="black"
       opacity={0.1}
       x={points[1].x - 10}
+      y={0}
       width={300}
       height={300}
     />
