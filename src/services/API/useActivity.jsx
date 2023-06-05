@@ -24,7 +24,7 @@ function useActivity(type, userId) {
         const data = await response.json()
         // console.log('fetchData', data)
         const userModeledData = userDataModeling(type, data)
-        console.log('userModeledData-01', userModeledData)
+        // console.log('userModeledData-01', userModeledData)
         setData(userModeledData)
       } catch (err) {
         console.log(err)

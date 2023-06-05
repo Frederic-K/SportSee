@@ -82,6 +82,7 @@ function CustomToolTip({ active, payload }) {
 }
 
 function CustumCursorShadow({ points }) {
+  console.log('pointes', points)
   return (
     <Rectangle
       fill="black"

@@ -23,7 +23,7 @@ function useAverageSessions(type, userId) {
         const data = await response.json()
         // console.log('fetchData', data)
         const userModeledData = userDataModeling(type, data)
-        console.log('userModeledData', userModeledData)
+        // console.log('userModeledData', userModeledData)
         setData(userModeledData)
       } catch (err) {
         console.log(err)
