@@ -33,7 +33,7 @@ function useAverageSessions(type, userId) {
       }
     }
     fetchData()
-  }, [type, userId, url])
+  }, [type, url])
   return { isLoading, data, error }
 }
 export default useAverageSessions

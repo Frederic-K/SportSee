@@ -27,7 +27,8 @@ export default function userDataModeling(type, data) {
 function getFirstName(data) {
   const globalUserData = data.data
   const globalUserInfos = globalUserData.userInfos
-  return globalUserInfos.firstName
+  const firstName = globalUserInfos.firstName
+  return firstName
 }
 
 function getKeyData(data) {
@@ -58,7 +59,7 @@ function getPerformance(data) {
     'Vitesse',
     'Intensité',
   ]
-  const arrayPerfDatas = arrayKindValues?.map((kind, index) => ({
+  const arrayPerfDatas = arrayKindValues.map((kind, index) => ({
     kind: translateKind[index],
     value: kind.value,
   }))
