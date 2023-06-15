@@ -1,3 +1,5 @@
+// Cards for Keydatas
+
 import useUser from '../../services/API/useUser'
 import SpinLoader from '../Loader/SpinLoader'
 import energyIcon from '../../assets/icon/energy.svg'
@@ -6,14 +8,18 @@ import carbsIcon from '../../assets/icon/apple.svg'
 import fatIcon from '../../assets/icon/cheeseburger.svg'
 
 export default function KeyData({ userId }) {
+  // Grab states from custom Hook
+  // Using type + id to ensure calling the correct data modeling fct
   const { isLoading, data, error } = useUser('key-data', userId)
 
+  // Manage error
   if (error) {
     return <div>Erreur de chargement...</div>
   }
 
   return (
     <div className="keyDatas__nutrition">
+      {/* Manage loading datas */}
       {isLoading ? (
         <SpinLoader />
       ) : (

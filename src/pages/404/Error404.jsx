@@ -1,3 +1,5 @@
+// Set 404 page for unknown routes
+
 import { NavLink } from 'react-router-dom'
 import Aside from '../../components/Aside/Aside'
 

@@ -1,9 +1,9 @@
+// Navbar component
+
 import { NavLink } from 'react-router-dom'
 import Logo from '../../assets/logo/logo.svg'
 
 export default function Header() {
-  // console.log('header ID', userId)
-  // let userId = localStorage.getItem('userId')
   return (
     <header className="header">
       <div className="header__logo">

@@ -1,8 +1,8 @@
-// import TickRender from '../../../services/model/RadarChartTickRender'
+// Radar chart for user's performances
+
 import {
   RadarChart,
   Radar,
-  // PolarRadiusAxis,
   PolarAngleAxis,
   Text,
   PolarGrid,
@@ -13,15 +13,18 @@ import usePerformance from '../../../services/API/usePerformance'
 import SpinLoader from '../../Loader/SpinLoader'
 
 export default function PerformanceChart({ userId }) {
+  // Grab states from custom Hook
+  // Using type + id to ensure calling the correct data modeling fct
   const { isLoading, data, error } = usePerformance('user-performance', userId)
-  // console.log('dataChart', data)
 
+  // Manage error
   if (error) {
     return <div>Erreur de chargement...</div>
   }
 
   return (
     <div className="chart__activity--performance">
+      {/* Manage loading datas */}
       {isLoading ? (
         <SpinLoader />
       ) : (
@@ -42,7 +45,6 @@ export default function PerformanceChart({ userId }) {
                 tickLine={false}
                 tick={(props) => RadarChartTickRender(props)}
               />
-              {/* <PolarRadiusAxis angle={0} stroke="white" /> */}
             </RadarChart>
           </ResponsiveContainer>
         </div>

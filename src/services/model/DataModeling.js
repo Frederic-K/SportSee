@@ -1,3 +1,6 @@
+// Format datas from fetch to normalize them before using datas in charts
+// Setting up a switch to call the correct modeling fct
+
 export default function userDataModeling(type, data) {
   switch (type) {
     case 'firstName':
@@ -45,12 +48,7 @@ function getDailyScore(data) {
 
 function getPerformance(data) {
   const globalDataPerf = data.data
-  // const arrayKinds = Object.values(globalDataPerf.kind)
-  // console.log('arrayKinds', arrayKinds)
-
   const arrayKindValues = globalDataPerf.data
-  // console.log('arrayKindValues', arrayKindValues)
-
   const translateKind = [
     'Cardio',
     'Energie',
@@ -67,8 +65,6 @@ function getPerformance(data) {
 }
 
 function getAverageSessions(data) {
-  // const globalDataAvgSessions = data.data
-  // console.log('globalDataAvgSessions', globalDataAvgSessions)
   const days = ['L', 'M', 'M', 'J', 'V', 'S', 'D']
   const arrayAverageSessions = data.data.sessions.map((session) => {
     return {
@@ -89,6 +85,5 @@ function getActivity(data) {
       }
     }
   )
-  // console.log('arraySessionsActivity', arraySessionsActivity)
   return arraySessionsActivity
 }

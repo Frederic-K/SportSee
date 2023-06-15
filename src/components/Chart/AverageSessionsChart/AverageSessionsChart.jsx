@@ -1,3 +1,5 @@
+// Line chart for user's average sessions
+
 import {
   LineChart,
   XAxis,
@@ -11,15 +13,18 @@ import useAverageSessions from '../../../services/API/useAverageSessions'
 import SpinLoader from '../../Loader/SpinLoader'
 
 export default function AverageSessionsChart({ userId }) {
+  // Grab states from custom Hook
+  // Using type + id to ensure calling the correct data modeling fct
   const { isLoading, data, error } = useAverageSessions('user-sessions', userId)
-  // console.log('dataChart', data)
 
+  // Manage error
   if (error) {
     return <div>Erreur de chargement...</div>
   }
 
   return (
     <div className="chart__activity--averageSessions">
+      {/* Manage loading datas */}
       {isLoading ? (
         <SpinLoader />
       ) : (
@@ -73,6 +78,7 @@ export default function AverageSessionsChart({ userId }) {
   )
 }
 
+// Setting up a custom tool tip
 function CustomToolTip({ active, payload }) {
   return active && payload ? (
     <div className="averageSessions__chart--toolTip">
@@ -81,6 +87,7 @@ function CustomToolTip({ active, payload }) {
   ) : null
 }
 
+// Setting up a transparent gray rectangle starting from rigth to the cursor position
 function CustumCursorShadow({ points }) {
   console.log('pointes', points)
   return (

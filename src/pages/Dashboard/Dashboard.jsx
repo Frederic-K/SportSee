@@ -8,27 +8,25 @@ import AverageSessionsChart from '../../components/Chart/AverageSessionsChart/Av
 import ActivityChart from '../../components/Chart/ActivityChart/ActivityChart'
 
 export default function Dashboard() {
+  // Grab userId from url
   const { id } = useParams()
 
+  // Set 404 page for unknown userID
   if (id !== '12' && id !== '120' && id !== '18' && id !== '180') {
-    // return <Navigate to="/fake-user" />
     return <Navigate to="*" />
   }
   return (
     <div className="dashboard">
       <Aside />
       <section className="dashboard__content">
+        {/* Pass userId to component */}
         <Banner userId={id} />
         <div className="dashboard__datas">
           <div className="dashboard__datas--charts">
-            {/* <div className="chart__dailyActivities"></div> */}
             <ActivityChart userId={id} />
             <div className="chart__activityDetails">
-              {/* <div className="chart__activity--averageSessions"></div> */}
               <AverageSessionsChart userId={id} />
-              {/* <div className="chart__activity--performance"></div> */}
               <PerformanceChart userId={id} />
-              {/* <div className="chart__activity--score"></div> */}
               <DailyScoreChart userId={id} />
             </div>
           </div>

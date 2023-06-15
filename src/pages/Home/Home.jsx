@@ -1,3 +1,5 @@
+// Set a connection page to manage dashboard with mocked datas or backend
+
 import { useNavigate } from 'react-router-dom'
 import { useRef } from 'react'
 import ProfilPixMale from '../../assets/icon/homme.png'
@@ -9,9 +11,11 @@ export default function Home() {
 
   function handleSubmit(event) {
     event.preventDefault()
-    // test stocker userId en localStorage
-    // localStorage.setItem('userId', userId.current)
-    navigate(`/user/${userId.current}`)
+    if (userId.current === '' || userId.current === null) {
+      alert('Merci de saisir un userID')
+    } else {
+      navigate(`/user/${userId.current}`)
+    }
   }
 
   return (
@@ -33,9 +37,10 @@ export default function Home() {
           type="text"
           id="userId"
           name="userId"
-          placeholder="Saisir votre userId ici"
+          placeholder="Saisir votre userId ici *"
           onChange={(event) => (userId.current = event.target.value)}
         />
+        <span>Saisie obligatoire *</span>
         <div className="form__btn">
           <button className="form__btn--reset" type="reset">
             Reset

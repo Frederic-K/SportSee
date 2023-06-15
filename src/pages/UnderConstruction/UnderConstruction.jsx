@@ -1,3 +1,5 @@
+// Set a default page for Profil / Réglage / Communauté section
+
 import { NavLink } from 'react-router-dom'
 import worksiteLogo from '../../assets/icon/travail-en-cours.png'
 import Aside from '../../components/Aside/Aside'
@@ -18,7 +20,6 @@ export default function underConstruction() {
           Oups! La page que vous demandez est en travaux.
         </div>
         <NavLink to="/" className="errorPage__link">
-          {/* Retourner à la page de connexion */}
           Retourner à la page d'acceuil
         </NavLink>
       </main>

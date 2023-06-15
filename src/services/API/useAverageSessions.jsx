@@ -1,3 +1,7 @@
+// Custom Hook to grab user's average sessions datas
+// Call fct to format data to ensure datas r always normalized
+// Set data with formatted data for line chart from average-sessions chart component
+
 import { useState, useEffect } from 'react'
 import userDataModeling from '../model/DataModeling'
 
@@ -19,13 +23,15 @@ function useAverageSessions(type, userId) {
     setLoading(true)
     async function fetchData() {
       try {
+        // Grab datas
         const response = await fetch(url)
         const data = await response.json()
-        // console.log('fetchData', data)
+        // Formatted datas
         const userModeledData = userDataModeling(type, data)
-        // console.log('userModeledData', userModeledData)
+        // Set datas with formatted datas
         setData(userModeledData)
       } catch (err) {
+        // Handel error
         console.log(err)
         setError(true)
       } finally {
