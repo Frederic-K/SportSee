@@ -1,3 +1,31 @@
+Openclassrooms Projet 12 : Développez un tableau de bord d'analytics avec React - Site SportSee
+
+![banner](./src/assets/sportseebanner.png)
+
+Le contexte du projet :
+
+- Mon profil : développeur chez SportSee.
+- L’entreprise : une startup dédiée au coaching sportif.
+- La mission : nouvelle version de la page profil de l’utilisateur.
+- L’objectif : développer un tableau de bord permettant à l’utilisateur de suivre le nombre de sessions réalisées, le nombre de calories brûlées et informations clés
+
+Cahier des charges :
+
+- Spécifications techniques :
+  - Développer la page avec React
+  - Séparation logique du code dans des composants réutilisables.
+  - Utilisation de D3 ou Recharts pour intégrer les graphiques
+  - Utilisation du backend fourni pour la réalisations des calls http
+  - Utilisation de Fetch ou Axios pour les calls
+  - Réaliser les calls hors composent React
+  - Commencer en travaillant avec un mock des données puis réaliser l’intégration de l’API
+  - Mettre en place un système de modélisations des données pour formater les données de l’API avant utilisation
+- Spécifications fonctionnelles :
+  - Kanban avec les User Stories
+  - Maquette Figma
+  - Desktop first
+  - Lisible sur les écrans d’au moins 1024 par 780 pixels.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
